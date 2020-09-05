@@ -13,6 +13,10 @@ function keyEnter(e) {
             previewBorder.style.borderRadius = 9999 + "px";
             code.innerHTML = "border-radius: " + 9999 + "px" + ";";
         }
+        else if (inputBorder.value < -9999) {
+            previewBorder.style.borderRadius = -9999 + "px";
+            code.innerHTML = "border-radius: " + -9999 + "px" + ";";
+        }
         else {
             previewBorder.style.borderRadius = inputBorder.value + "px";
             code.innerHTML = "border-radius: " + inputBorder.value + "px" + ";";

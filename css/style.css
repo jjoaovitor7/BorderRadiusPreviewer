@@ -61,6 +61,7 @@ input[type="number"] {
     margin-left: 50px;
 }
 
+/* footer */
 footer {
     background-color: #34574f;
 
@@ -79,6 +80,7 @@ footer p {
     font-family: 'Lobster', cursive;
 }
 
+/* Media Queries */
 @media screen and (max-width: 768px){
     .container {
         width: 550px;

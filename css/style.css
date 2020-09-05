@@ -76,3 +76,9 @@ footer p {
     color: #fff;
     font-family: 'Lobster', cursive;
 }
+
+@media screen and (max-width: 768px){
+    .container {
+        width: 550px;
+    }
+}

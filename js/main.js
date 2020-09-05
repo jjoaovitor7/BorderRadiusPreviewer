@@ -64,6 +64,29 @@ function keyEnter(e) {
                 code.innerHTML = "border-radius: " + inputBorderValue + "px;";
                 code.innerHTML += "<br/>-moz-border-radius: " + inputBorderValue + "px;";
             }
+            
+            else if (css3Checked && mozNotChecked && webkitChecked)
+            {
+                previewBorder.style.borderRadius = inputBorderValue + "px";
+                code.innerHTML = "border-radius: " + inputBorderValue + "px;";
+                code.innerHTML += "<br/>-webkit-border-radius: " + inputBorderValue + "px;";
+            }
+
+            else if (css3NotChecked && mozChecked && webkitChecked)
+            {
+                previewBorder.style.borderRadius = inputBorderValue + "px";
+                code.innerHTML = "-moz-border-radius: " + inputBorderValue + "px;";
+                code.innerHTML += "<br/>-webkit-border-radius: " + inputBorderValue + "px;";
+            }
+
+
+            else if (css3Checked && mozChecked && webkitChecked)
+            {
+                previewBorder.style.borderRadius = inputBorderValue + "px";
+                code.innerHTML = "border-radius: " + inputBorderValue + "px;";
+                code.innerHTML += "<br/>-moz-border-radius: " + inputBorderValue + "px;";
+                code.innerHTML += "<br/>-webkit-border-radius: " + inputBorderValue + "px;";
+            }
         }
     }
 }

@@ -22,6 +22,7 @@ function keyEnter(e) {
     let mozNotChecked    = chkMoz.checked == false
     let webkitNotChecked = chkWebkit.checked == false
 
+
     if(keyEnterPressed) {
         // console.log(inputBorder.value);
         // console.log(previewBorder)

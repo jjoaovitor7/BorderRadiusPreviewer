@@ -1,7 +1,8 @@
 body {
     display: flex;
     justify-content: center;
-
+    flex-direction: column;
+    align-items: center;
     background: linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
 }
 
@@ -16,8 +17,9 @@ body {
 
     width: 800px;
     height: 250px;
-
-    margin-top: 25vh;
+}
+.container:nth-child(2) {
+    background-color: #fff;
 }
 
 label {

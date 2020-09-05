@@ -8,9 +8,16 @@ function keyEnter(e) {
     if(key == 13) {
         // console.log(inputBorder.value);
         // console.log(previewBorder)
-        previewBorder.style.borderRadius = inputBorder.value + "px";
 
-        code.innerHTML = "border-radius: " + inputBorder.value + "px" + ";";
+        if (inputBorder.value > 9999) {
+            previewBorder.style.borderRadius = 9999 + "px";
+            code.innerHTML = "border-radius: " + 9999 + "px" + ";";
+        }
+        else {
+            previewBorder.style.borderRadius = inputBorder.value + "px";
+            code.innerHTML = "border-radius: " + inputBorder.value + "px" + ";";
+        }
+
     }
 }
 

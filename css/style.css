@@ -9,6 +9,7 @@ body {
     background: linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
     background: -moz-linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
     background: -webkit-linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
+    background: -o-linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
 
     display: flex;
     flex-direction: column;

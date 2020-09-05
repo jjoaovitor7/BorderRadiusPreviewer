@@ -93,6 +93,9 @@ footer p {
     .container {
         width: 350px;
     }
+    .container label:nth-child(1) {
+        margin-left: 15px;
+    }
 
     .preview {
         margin-right: 15px;

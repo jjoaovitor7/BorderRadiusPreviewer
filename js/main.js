@@ -18,6 +18,10 @@ function keyEnter(e) {
     let mozChecked    = chkMoz.checked == true
     let webkitChecked = chkWebkit.checked == true
 
+    let css3NotChecked   = chkCss3.checked == false
+    let mozNotChecked    = chkMoz.checked == false
+    let webkitNotChecked = chkWebkit.checked == false
+
     if(keyEnterPressed) {
         // console.log(inputBorder.value);
         // console.log(previewBorder)
@@ -35,23 +39,30 @@ function keyEnter(e) {
         }
 
         else {
-
-            if (css3Checked) 
+            
+            if (css3Checked && mozNotChecked && webkitNotChecked) 
             {
                 previewBorder.style.borderRadius = inputBorderValue + "px";
                 code.innerHTML = "border-radius: " + inputBorderValue + "px;";
             }
 
-            else if (mozChecked)
+            else if (mozChecked && css3NotChecked && webkitNotChecked)
             {
                 previewBorder.style.borderRadius = inputBorderValue + "px";
                 code.innerHTML = "-moz-border-radius: " + inputBorderValue + "px;";
             }
 
-            else if (webkitChecked)
+            else if (webkitChecked && mozNotChecked && css3NotChecked)
             {
                 previewBorder.style.borderRadius = inputBorderValue + "px";
                 code.innerHTML = "-webkit-border-radius: " + inputBorderValue + "px;";            
+            }
+
+            else if (css3Checked && mozChecked && webkitNotChecked)
+            {
+                previewBorder.style.borderRadius = inputBorderValue + "px";
+                code.innerHTML = "border-radius: " + inputBorderValue + "px;";
+                code.innerHTML += "<br/>-moz-border-radius: " + inputBorderValue + "px;";
             }
         }
     }

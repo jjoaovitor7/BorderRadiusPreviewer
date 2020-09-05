@@ -4,22 +4,27 @@ const code          = document.querySelector(".code");
 
 function keyEnter(e) {
     let key = e.keyCode;
+    let keyEnterPressed = (key == 13);
 
-    if(key == 13) {
+    let inputBorderValue = inputBorder.value
+    let veryHighValue = inputBorderValue > 9999;
+    let veryLowValue  = inputBorderValue < -9999;
+
+    if(keyEnterPressed) {
         // console.log(inputBorder.value);
         // console.log(previewBorder)
 
-        if (inputBorder.value > 9999) {
+        if (veryHighValue) {
             previewBorder.style.borderRadius = 9999 + "px";
             code.innerHTML = "border-radius: " + 9999 + "px" + ";";
         }
-        else if (inputBorder.value < -9999) {
+        else if (veryLowValue) {
             previewBorder.style.borderRadius = -9999 + "px";
             code.innerHTML = "border-radius: " + -9999 + "px" + ";";
         }
         else {
-            previewBorder.style.borderRadius = inputBorder.value + "px";
-            code.innerHTML = "border-radius: " + inputBorder.value + "px" + ";";
+            previewBorder.style.borderRadius = inputBorderValue + "px";
+            code.innerHTML = "border-radius: " + inputBorderValue + "px" + ";";
         }
 
     }

@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+
+    background: linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
+}
+
+.container {
+    border: 5px solid #000;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 800px;
+    height: 250px;
+
+    margin-top: 25vh;
+}
+
+label {
+    margin-right: 10px;
+}
+input[type="number"] {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.preview {
+    border: 1px solid #000;
+    width: 100px;
+    height: 100px;
+}

@@ -9,7 +9,6 @@ function keyEnter(e) {
         // console.log(previewBorder)
         previewBorder.style.borderRadius = inputBorder.value + "px";
     }
- 
 }
 
 inputBorder.addEventListener("keydown", keyEnter);

@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: #adfcea;
     background: linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
@@ -10,6 +16,7 @@ body {
 
 header h1 {
     font-family: 'Times New Roman', Times, serif;
+    margin: 10px 0;
 }
 
 .container {
@@ -60,12 +67,12 @@ footer {
     left: 0;
     right: 0;
 
-    padding-left: 10px;
+    padding: 11.5px;
 }
 
 footer p {
     text-shadow: 4px 4px 8px #00ffff;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     font-family: 'Lobster', cursive;
 }

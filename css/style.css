@@ -7,6 +7,8 @@
 body {
     background: #adfcea;
     background: linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
+    background: -moz-linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
+    background: -webkit-linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
 
     display: flex;
     flex-direction: column;
@@ -82,3 +84,21 @@ footer p {
         width: 550px;
     }
 }
+<<<<<<< HEAD
+
+@media screen and (max-width: 640px){
+    header h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 350px;
+    }
+
+    .preview {
+        margin-right: 15px;
+        height: 80px;
+    }
+}
+=======
+>>>>>>> f101eac4f3e93cb28a6552f2868e915d9250344b

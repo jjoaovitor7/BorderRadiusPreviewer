@@ -35,7 +35,7 @@ header h1 {
     height: 250px;
     margin-bottom: 5px;
 }
-.container:nth-child(2) {
+.container:nth-child(3) {
     background-color: #fff;
 }
 

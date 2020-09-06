@@ -39,8 +39,8 @@ header h1 {
     background-color: #fff;
 }
 
-label {
-    margin-right: 10px;
+.container label {
+    margin-left: 10px;
 }
 input[type="number"] {
     width: 100px;
@@ -65,6 +65,10 @@ input[type="number"] {
 
 .container-checkboxes {
     margin-left: 50px;
+}
+
+.container-checkboxes label {
+    margin-right: 10px;
 }
 
 .help {
@@ -106,22 +110,31 @@ footer p {
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px){
-    .container {
-        width: 550px;
-    }
-}
-
 @media screen and (max-width: 640px){
     header h1 {
         font-size: 28px;
     }
 
     .container {
+        display: flex;
+        flex-direction: column;
         width: 350px;
     }
-    .container label:nth-child(1) {
-        margin-left: 15px;
+
+    .container input[type="number"] {
+        margin-bottom: 5px;
+    }
+
+    .container button {
+        margin-bottom: 10px;
+    }
+
+    .preview {
+        margin-bottom: 10px;
+    }
+
+    .container label {
+        margin-bottom: 5px;
     }
 
     .preview {

@@ -11,12 +11,6 @@ const chkBorderBottomLeft  = document.getElementById("bottomLeft");
 const chkBorderTopRight    = document.getElementById("topRight");
 const chkBorderBottomRight = document.getElementById("bottomRight");
 
-const imgHelp       = document.querySelector(".img-help");
-const spanHelp      = document.querySelector(".span-help");
-
-const buttonReset   = document.getElementById("reset-border");
-
-
 function keyEnter(e) {
     let key = e.which || e.keyCode;
     let keyEnterPressed = (key == 13);
@@ -190,11 +184,3 @@ function keyEnter(e) {
 }
 
 inputBorder.addEventListener("keydown", keyEnter);
-
-imgHelp.addEventListener("click", function(e){
-    spanHelp.style.display = "block";
-});
-
-buttonReset.addEventListener("click", function(e){
-    previewBorder.style.borderRadius = "0px";
-});

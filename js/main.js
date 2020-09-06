@@ -5,10 +5,6 @@ const chkCss3       = document.getElementById("css3");
 const chkMoz        = document.getElementById("moz");
 const chkWebkit     = document.getElementById("webkit");
 
-const imgHelp       = document.querySelector(".img-help");
-const spanHelp      = document.querySelector(".span-help");
-
-
 function keyEnter(e) {
     let key = e.which || e.keyCode;
     let keyEnterPressed = (key == 13);
@@ -91,7 +87,3 @@ function keyEnter(e) {
 }
 
 inputBorder.addEventListener("keydown", keyEnter);
-
-imgHelp.addEventListener("click", function(e){
-    spanHelp.style.display = "block";
-});

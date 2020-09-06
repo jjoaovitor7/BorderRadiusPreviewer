@@ -9,5 +9,5 @@ function hiddenText(e) {
     spanHelp.style.display = "none";
 }
 
-imgHelp.addEventListener("click", showText);
-imgHelp.addEventListener("dblclick", hiddenText);
+imgHelp.addEventListener("mouseover", showText);
+imgHelp.addEventListener("mouseout", hiddenText);

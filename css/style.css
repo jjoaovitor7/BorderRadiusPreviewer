@@ -47,6 +47,17 @@ input[type="number"] {
     margin-right: 10px;
 }
 
+button {
+    background-color: #008cba;; /* Green */
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px #000;
+}
+
 .preview {
     border: 1px solid #000;
     width: 100px;

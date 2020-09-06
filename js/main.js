@@ -14,6 +14,8 @@ const chkBorderBottomRight = document.getElementById("bottomRight");
 const imgHelp       = document.querySelector(".img-help");
 const spanHelp      = document.querySelector(".span-help");
 
+const buttonReset   = document.getElementById("reset-border");
+
 
 function keyEnter(e) {
     let key = e.which || e.keyCode;
@@ -40,7 +42,8 @@ function keyEnter(e) {
     let borderBottomLeftNotChecked  = chkBorderBottomLeft.checked == false;
     let borderBottomRightNotChecked = chkBorderBottomRight.checked == false;
     let borderTopRightNotChecked    = chkBorderTopRight.checked == false;
-
+    
+    //border-top-left, border-bottom-left, border-top-right, border-bottom-right
     let AllBorderNotChecked = borderTopLeftNotChecked
                             && borderBottomLeftNotChecked
                             && borderTopRightNotChecked 
@@ -50,6 +53,10 @@ function keyEnter(e) {
     let borderTopRightCheckedVar    = borderTopLeftNotChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked;
     let borderBottomLeftCheckedVar  = borderTopLeftNotChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightNotChecked;
     let borderBottomRightCheckedVar = borderTopLeftNotChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightChecked;
+
+    let borderTopLeftTopRightCheckedVar    = borderTopLeftChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked
+    let borderTopLeftBottomLeftCheckedVar  = borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightNotChecked
+    let borderTopLeftBottomRightCheckedVar = borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightChecked
 
     if(keyEnterPressed) {
         // console.log(inputBorder.value);
@@ -70,7 +77,7 @@ function keyEnter(e) {
         else {
             if (AllBorderNotChecked)
             {
-                previewBorder.style.borderRadius = inputBorderValue + "px;";
+                previewBorder.style.borderRadius = inputBorderValue + "px";
             }
 
             else if (borderTopLeftCheckedVar)
@@ -92,23 +99,22 @@ function keyEnter(e) {
                 previewBorder.style.borderBottomRightRadius = inputBorderValue + "px";
             }
 
-            else if (borderTopLeftChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked)
+            else if (borderTopLeftTopRightCheckedVar)
             {
                 previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
                 previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
             }
 
-            else if (borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightNotChecked)
+            else if (borderTopLeftBottomLeftCheckedVar)
             {
                 previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
-                previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
-            }
-
-            else if (borderTopLeftChecked && borderTopRightChecked && borderBottomLeftChecked && borderBottomRightNotChecked)
-            {
-                previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
-                previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
                 previewBorder.style.borderBottomLeftRadius = inputBorderValue + "px";
+            }
+
+            else if (borderTopLeftBottomRightCheckedVar)
+            {
+                previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
+                previewBorder.style.borderBottomRightRadius = inputBorderValue + "px";
             }
 
             
@@ -161,4 +167,8 @@ inputBorder.addEventListener("keydown", keyEnter);
 
 imgHelp.addEventListener("click", function(e){
     spanHelp.style.display = "block";
+});
+
+buttonReset.addEventListener("click", function(e){
+    previewBorder.style.borderRadius = "0px";
 });

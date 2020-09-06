@@ -68,6 +68,9 @@ input[type="number"] {
     position: fixed;
     bottom: 50px;
     right: 50px;
+}
+
+.help img {
     cursor: pointer;
 }
 

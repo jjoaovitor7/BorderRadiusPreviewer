@@ -1,9 +1,15 @@
 const inputBorder   = document.getElementById("vborder");
 const previewBorder = document.querySelector(".preview");
 const code          = document.querySelector(".code");
+
 const chkCss3       = document.getElementById("css3");
 const chkMoz        = document.getElementById("moz");
 const chkWebkit     = document.getElementById("webkit");
+
+const chkBorderTopLeft     = document.getElementById("topLeft");
+const chkBorderBottomLeft  = document.getElementById("bottomLeft");
+const chkBorderTopRight    = document.getElementById("topRight");
+const chkBorderBottomRight = document.getElementById("bottomRight");
 
 const imgHelp       = document.querySelector(".img-help");
 const spanHelp      = document.querySelector(".span-help");
@@ -21,10 +27,24 @@ function keyEnter(e) {
     let mozChecked    = chkMoz.checked == true;
     let webkitChecked = chkWebkit.checked == true;
 
+    let borderTopLeftChecked     = chkBorderTopLeft.checked == true;
+    let borderBottomLeftChecked  = chkBorderBottomLeft.checked == true;
+    let borderBottomRightChecked = chkBorderBottomRight.checked == true;
+    let borderTopRightChecked    = chkBorderTopRight.checked == true;
+
     let css3NotChecked   = chkCss3.checked == false;
     let mozNotChecked    = chkMoz.checked == false;
     let webkitNotChecked = chkWebkit.checked == false;
 
+    let borderTopLeftNotChecked     = chkBorderTopLeft.checked == false;
+    let borderBottomLeftNotChecked  = chkBorderBottomLeft.checked == false;
+    let borderBottomRightNotChecked = chkBorderBottomRight.checked == false;
+    let borderTopRightNotChecked    = chkBorderTopRight.checked == false;
+
+    let AllBorderNotChecked = borderTopLeftNotChecked
+                            && borderBottomLeftNotChecked
+                            && borderTopRightNotChecked 
+                            && borderBottomRightNotChecked;
 
     if(keyEnterPressed) {
         // console.log(inputBorder.value);
@@ -43,8 +63,22 @@ function keyEnter(e) {
         }
 
         else {
+            if (AllBorderNotChecked)
+            {
+                previewBorder.style.borderRadius = inputBorderValue + "px;";
+            }
+            else if (!AllBorderNotChecked) {
+                previewBorder.style.borderRadius = inputBorderValue + "px;";
+            }
 
-            previewBorder.style.borderRadius = inputBorderValue + "px";
+            else if (borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked){
+                previewBorder.style.borderTopLeftRadius = inputBorderValue + "px;";
+            }
+
+            else if (borderTopLeftChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked){
+                previewBorder.style.borderTopLeftRadius  = inputBorderValue + "px;";
+                previewBorder.style.borderTopRightRadius = inputBorderValue + "px;";
+            }
 
             if (css3Checked && mozNotChecked && webkitNotChecked) 
             {

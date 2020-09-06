@@ -46,6 +46,11 @@ function keyEnter(e) {
                             && borderTopRightNotChecked 
                             && borderBottomRightNotChecked;
 
+    let borderTopLeftCheckedVar     = borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked;
+    let borderTopRightCheckedVar    = borderTopLeftNotChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked;
+    let borderBottomLeftCheckedVar  = borderTopLeftNotChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightNotChecked;
+    let borderBottomRightCheckedVar = borderTopLeftNotChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightChecked;
+
     if(keyEnterPressed) {
         // console.log(inputBorder.value);
         // console.log(previewBorder)
@@ -67,54 +72,82 @@ function keyEnter(e) {
             {
                 previewBorder.style.borderRadius = inputBorderValue + "px;";
             }
-            else if (!AllBorderNotChecked) {
-                previewBorder.style.borderRadius = inputBorderValue + "px;";
+
+            else if (borderTopLeftCheckedVar)
+            {
+                previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
             }
 
-            else if (borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked){
-                previewBorder.style.borderTopLeftRadius = inputBorderValue + "px;";
+            else if (borderTopRightCheckedVar)
+            {
+                previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
+            }
+            else if (borderBottomLeftCheckedVar)
+            {
+                previewBorder.style.borderBottomLeftRadius = inputBorderValue + "px";
+            
+            }
+            else if (borderBottomRightCheckedVar)
+            {
+                previewBorder.style.borderBottomRightRadius = inputBorderValue + "px";
             }
 
-            else if (borderTopLeftChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked){
-                previewBorder.style.borderTopLeftRadius  = inputBorderValue + "px;";
-                previewBorder.style.borderTopRightRadius = inputBorderValue + "px;";
+            else if (borderTopLeftChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked)
+            {
+                previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
+                previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
             }
 
-            if (css3Checked && mozNotChecked && webkitNotChecked) 
+            else if (borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightNotChecked)
+            {
+                previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
+                previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
+            }
+
+            else if (borderTopLeftChecked && borderTopRightChecked && borderBottomLeftChecked && borderBottomRightNotChecked)
+            {
+                previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
+                previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
+                previewBorder.style.borderBottomLeftRadius = inputBorderValue + "px";
+            }
+
+            
+
+            if (css3Checked && mozNotChecked && webkitNotChecked && AllBorderNotChecked) 
             {
                 code.innerHTML = "border-radius: " + inputBorderValue + "px;";
             }
 
-            else if (mozChecked && css3NotChecked && webkitNotChecked)
+            else if (mozChecked && css3NotChecked && webkitNotChecked && AllBorderNotChecked)
             {
                 code.innerHTML = "-moz-border-radius: " + inputBorderValue + "px;";
             }
 
-            else if (webkitChecked && mozNotChecked && css3NotChecked)
+            else if (webkitChecked && mozNotChecked && css3NotChecked && AllBorderNotChecked)
             {
                 code.innerHTML = "-webkit-border-radius: " + inputBorderValue + "px;";            
             }
 
-            else if (css3Checked && mozChecked && webkitNotChecked)
+            else if (css3Checked && mozChecked && webkitNotChecked && AllBorderNotChecked)
             {
                 code.innerHTML = "border-radius: " + inputBorderValue + "px;";
                 code.innerHTML += "<br/>-moz-border-radius: " + inputBorderValue + "px;";
             }
             
-            else if (css3Checked && mozNotChecked && webkitChecked)
+            else if (css3Checked && mozNotChecked && webkitChecked && AllBorderNotChecked)
             {
                 code.innerHTML = "border-radius: " + inputBorderValue + "px;";
                 code.innerHTML += "<br/>-webkit-border-radius: " + inputBorderValue + "px;";
             }
 
-            else if (css3NotChecked && mozChecked && webkitChecked)
+            else if (css3NotChecked && mozChecked && webkitChecked && AllBorderNotChecked)
             {
                 code.innerHTML = "-moz-border-radius: " + inputBorderValue + "px;";
                 code.innerHTML += "<br/>-webkit-border-radius: " + inputBorderValue + "px;";
             }
 
 
-            else if (css3Checked && mozChecked && webkitChecked)
+            else if (css3Checked && mozChecked && webkitChecked && AllBorderNotChecked)
             {
                 code.innerHTML = "border-radius: " + inputBorderValue + "px;";
                 code.innerHTML += "<br/>-moz-border-radius: " + inputBorderValue + "px;";

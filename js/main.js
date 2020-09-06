@@ -43,7 +43,9 @@ function keyEnter(e) {
         }
 
         else {
-            
+
+            previewBorder.style.borderRadius = inputBorderValue + "px";
+
             if (css3Checked && mozNotChecked && webkitNotChecked) 
             {
                 previewBorder.style.borderRadius = inputBorderValue + "px";

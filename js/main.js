@@ -54,9 +54,14 @@ function keyEnter(e) {
     let borderBottomLeftCheckedVar  = borderTopLeftNotChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightNotChecked;
     let borderBottomRightCheckedVar = borderTopLeftNotChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightChecked;
 
-    let borderTopLeftTopRightCheckedVar    = borderTopLeftChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked
-    let borderTopLeftBottomLeftCheckedVar  = borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightNotChecked
-    let borderTopLeftBottomRightCheckedVar = borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightChecked
+    let borderTopLeftTopRightCheckedVar    = borderTopLeftChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightNotChecked;
+    let borderTopLeftBottomLeftCheckedVar  = borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightNotChecked;
+    let borderTopLeftBottomRightCheckedVar = borderTopLeftChecked && borderTopRightNotChecked && borderBottomLeftNotChecked && borderBottomRightChecked;
+
+    let borderTopRightBottomLeftCheckedVar  = borderTopLeftNotChecked && borderTopRightChecked && borderBottomLeftChecked && borderBottomRightNotChecked;
+    let borderTopRightBottomRightCheckedVar = borderTopLeftNotChecked && borderTopRightChecked && borderBottomLeftNotChecked && borderBottomRightChecked;
+
+    let borderBottomRightBottomLeftCheckedVar = borderTopLeftNotChecked && borderTopRightNotChecked && borderBottomLeftChecked && borderBottomRightChecked;
 
     if(keyEnterPressed) {
         // console.log(inputBorder.value);
@@ -116,8 +121,24 @@ function keyEnter(e) {
                 previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";
                 previewBorder.style.borderBottomRightRadius = inputBorderValue + "px";
             }
-
             
+            else if (borderTopRightBottomLeftCheckedVar)
+            {
+                previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
+                previewBorder.style.borderBottomLeftRadius = inputBorderValue + "px";
+            }
+
+            else if (borderTopRightBottomRightCheckedVar)
+            {
+                previewBorder.style.borderTopRightRadius = inputBorderValue + "px";
+                previewBorder.style.borderBottomRightRadius = inputBorderValue + "px";
+            }
+
+            else if (borderBottomRightBottomLeftCheckedVar){
+                previewBorder.style.borderBottomLeftRadius = inputBorderValue + "px";
+                previewBorder.style.borderBottomRightRadius = inputBorderValue + "px";
+            }
+
 
             if (css3Checked && mozNotChecked && webkitNotChecked && AllBorderNotChecked) 
             {

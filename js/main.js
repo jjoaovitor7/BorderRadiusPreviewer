@@ -10,17 +10,17 @@ function keyEnter(e) {
     let key = e.keyCode;
     let keyEnterPressed = (key == 13);
 
-    let inputBorderValue = inputBorder.value
+    let inputBorderValue = inputBorder.value;
     let veryHighValue = inputBorderValue > 9999;
     let veryLowValue  = inputBorderValue < -9999;
 
-    let css3Checked   = chkCss3.checked == true
-    let mozChecked    = chkMoz.checked == true
-    let webkitChecked = chkWebkit.checked == true
+    let css3Checked   = chkCss3.checked == true;
+    let mozChecked    = chkMoz.checked == true;
+    let webkitChecked = chkWebkit.checked == true;
 
-    let css3NotChecked   = chkCss3.checked == false
-    let mozNotChecked    = chkMoz.checked == false
-    let webkitNotChecked = chkWebkit.checked == false
+    let css3NotChecked   = chkCss3.checked == false;
+    let mozNotChecked    = chkMoz.checked == false;
+    let webkitNotChecked = chkWebkit.checked == false;
 
 
     if(keyEnterPressed) {

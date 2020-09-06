@@ -62,6 +62,22 @@ input[type="number"] {
     margin-left: 50px;
 }
 
+.help {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.help span {
+    background-color: #fff;
+    padding-right: 15px;
+    font-size: 16px;
+    display: none;
+}
+
 /* footer */
 footer {
     background-color: #34574f;

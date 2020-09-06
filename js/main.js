@@ -85,6 +85,11 @@ function keyEnter(e) {
                 previewBorder.style.borderRadius = inputBorderValue + "px";
             }
 
+            else if (!AllBorderNotChecked)
+            {
+                previewBorder.style.borderRadius = inputBorderValue + "px";
+            }
+
             else if (borderTopLeftCheckedVar)
             {
                 previewBorder.style.borderTopLeftRadius = inputBorderValue + "px";

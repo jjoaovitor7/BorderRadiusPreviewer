@@ -152,4 +152,8 @@ footer p {
         margin-right: 15px;
         height: 80px;
     }
+
+    .code {
+        margin-bottom: 10px;
+    }
 }

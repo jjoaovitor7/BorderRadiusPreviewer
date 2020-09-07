@@ -71,6 +71,7 @@ button {
     text-shadow: 1px 1px 1px #000;
     cursor: pointer;
     border-radius: 25px;
+    margin-left: 10px;
 }
 button:active{
     position: relative;
@@ -152,14 +153,14 @@ footer p {
         display: flex;
         flex-direction: column;
         width: 350px;
-    }
-
-    .container input[type="number"] {
-        margin-bottom: 5px;
+        height: 350px;
     }
 
     .container button {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+    }
+    .container button:nth-child(2) {
+        margin-top: 5px;
     }
 
     .preview {

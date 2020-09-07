@@ -23,7 +23,7 @@ function keyEnter(e) {
     let mozChecked    = chkMoz.checked == true;
     let webkitChecked = chkWebkit.checked == true;
 
-    if(keyEnterPressed) {
+    if(keyEnterPressed || e.buttons == 0) {
 
         previewBorder.style.borderTopLeftRadius = inputBorderValue1  + "px";
         previewBorder.style.borderTopRightRadius = inputBorderValue2  + "px";

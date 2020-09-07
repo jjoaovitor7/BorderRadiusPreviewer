@@ -72,8 +72,14 @@ button {
     cursor: pointer;
     border-radius: 25px;
     margin-left: 10px;
+    opacity: 0.8;
+    transition: 0.4s;
 }
-button:active{
+button:hover {
+    opacity: 1;
+}
+
+button:active {
     position: relative;
     top: 1px;
 }

@@ -17,10 +17,19 @@ body {
     align-items: center;
 }
 
+/* Header */
+header {
+    background-color: #34574f;
+    width: 100%;
+    text-align: center;
+}
 header h1 {
     font-family: 'Times New Roman', Times, serif;
     margin: 10px 0;
+    color: #fff;
 }
+/**********/
+
 
 .container {
     border: 5px solid #000;
@@ -38,13 +47,17 @@ header h1 {
 .container:nth-child(3) {
     background-color: #fff;
 }
-
 .container label {
     margin-left: 10px;
 }
 input[type="number"] {
-    width: 100px;
+    width: 150px;
     margin-right: 10px;
+}
+
+.container-borders {
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -58,6 +71,7 @@ button {
     text-shadow: 1px 1px 1px #000;
     cursor: pointer;
     border-radius: 25px;
+    margin-left: 10px;
 }
 button:active{
     position: relative;
@@ -108,7 +122,7 @@ button:active{
     display: none;
 }
 
-/* footer */
+/* Footer */
 footer {
     background-color: #34574f;
 
@@ -126,6 +140,8 @@ footer p {
     color: #fff;
     font-family: 'Lobster', cursive;
 }
+/**********/
+
 
 /* Media Queries */
 @media screen and (max-width: 768px){
@@ -137,14 +153,14 @@ footer p {
         display: flex;
         flex-direction: column;
         width: 350px;
-    }
-
-    .container input[type="number"] {
-        margin-bottom: 5px;
+        height: 350px;
     }
 
     .container button {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+    }
+    .container button:nth-child(2) {
+        margin-top: 5px;
     }
 
     .preview {

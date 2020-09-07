@@ -1,59 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Border Radius Preview</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- fonte -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <h1>Border Radius Previewer</h1>
+      <h1>Border Radius Previewer</h1>
     </header>
 
     <div class="container">
-        <label>Valor do Border Radius (em px)</label>
-        <input type="number" name="vborder" id="vborder">
+      <div class="container-borders">
+        <input type="number" placeholder="top-left" id="vTopLeft" />
+        <input type="number" placeholder="top-right" id="vTopRight" />
+        <input type="number" placeholder="bottom-left" id="vBottomLeft" />
+        <input type="number" placeholder="bottom-right" id="vBottomRight" />
+      </div>
+      <button id="btn-reset">Resetar</button>
 
-        <button id="btn-reset">Resetar</button>
-
-        <div class="preview"></div>
+      <div class="preview"></div>
     </div>
 
     <div class="container">
-        <p class="code"></p>
-        <br />
+      <p class="code"></p>
+      <br />
 
-        <div class="container-checkboxes">
-            <input type="checkbox" name="css3" id="css3">
-            <label>css3</label>
-            <input type="checkbox" name="moz" id="moz">
-            <label>moz</label>
-            <input type="checkbox" name="webkit" id="webkit">
-            <label>webkit</label>
-        </div>
+      <div class="container-checkboxes">
+        <input type="checkbox" name="css3" id="css3" />
+        <label>css3</label>
+        <input type="checkbox" name="moz" id="moz" />
+        <label>moz</label>
+        <input type="checkbox" name="webkit" id="webkit" />
+        <label>webkit</label>
+      </div>
     </div>
 
     <div class="help">
-        <span class="span-help">Apertar Enter no Input para Preview</span>
-        <img class="img-help" src="assets/help.png" height="50px">
+      <span class="span-help">Apertar Enter no Input para Preview</span>
+      <img class="img-help" src="assets/help.png" height="50px" />
     </div>
 
     <footer>
-        <p>jjoaovitor7</p>
+      <p>jjoaovitor7</p>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/reset.js"></script>
     <script src="js/help.js"></script>
-
-</body>
-
+  </body>
 </html>

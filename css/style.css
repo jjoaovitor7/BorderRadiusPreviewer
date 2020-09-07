@@ -17,10 +17,13 @@ body {
     align-items: center;
 }
 
+/* Header */
 header h1 {
     font-family: 'Times New Roman', Times, serif;
     margin: 10px 0;
 }
+/**********/
+
 
 .container {
     border: 5px solid #000;
@@ -38,13 +41,17 @@ header h1 {
 .container:nth-child(3) {
     background-color: #fff;
 }
-
 .container label {
     margin-left: 10px;
 }
 input[type="number"] {
-    width: 100px;
+    width: 150px;
     margin-right: 10px;
+}
+
+.container-borders {
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -108,7 +115,7 @@ button:active{
     display: none;
 }
 
-/* footer */
+/* Footer */
 footer {
     background-color: #34574f;
 
@@ -126,6 +133,8 @@ footer p {
     color: #fff;
     font-family: 'Lobster', cursive;
 }
+/**********/
+
 
 /* Media Queries */
 @media screen and (max-width: 768px){

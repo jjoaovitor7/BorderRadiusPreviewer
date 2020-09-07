@@ -18,9 +18,15 @@ body {
 }
 
 /* Header */
+header {
+    background-color: #34574f;
+    width: 100%;
+    text-align: center;
+}
 header h1 {
     font-family: 'Times New Roman', Times, serif;
     margin: 10px 0;
+    color: #fff;
 }
 /**********/
 

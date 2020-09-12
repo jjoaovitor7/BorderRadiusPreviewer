@@ -6,13 +6,13 @@
  * mensagem desaparecerá.
  */
 
- /** en
-  * This is a file for manipulation of the help button,
-  * 2 events are added, one event that to hover the mouse 
-  * in the button area a help message will apear, and an-
-  * other event that to removing the mouse from the butt-
-  * on area the message will disappear.
-  */
+/** en
+ * This is a file for manipulation of the help button,
+ * 2 events are added, one event that to hover the mouse
+ * in the button area a help message will apear, and an-
+ * other event that to removing the mouse from the butt-
+ * on area the message will disappear.
+ */
 
 const imgHelp = document.querySelector(".img-help");
 const spanHelp = document.querySelector(".span-help");

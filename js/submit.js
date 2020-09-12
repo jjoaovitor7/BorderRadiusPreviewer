@@ -10,5 +10,5 @@
  * call the process function from the main.js file.
  */
 
-const buttonSend = document.getElementById("btn-enviar");
+const buttonSend = document.getElementById("btn-send");
 buttonSend.addEventListener("click", process);

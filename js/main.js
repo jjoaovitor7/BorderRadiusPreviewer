@@ -1,127 +1,46 @@
-const inputBorder1   = document.getElementById("vTopLeft");
-const inputBorder2   = document.getElementById("vTopRight");
-const inputBorder3   = document.getElementById("vBottomLeft");
-const inputBorder4   = document.getElementById("vBottomRight");
+/** pt_BR
+ * Este é o arquivo principal da aplicação, é nele que está
+ * a declaração dos inputs, do preview e da função process,
+ * sendo a mesma que irá processar a alteração do preview,
+ * (com exceção do reset, que o arquivo responsável é o reset.css),
+ * verificando se a tecla pressionado foi o Enter/Return e
+ * acionando a função codeBox(params) do arquivo code.js e
+ * também adicionando os eventos de clique da tecla nos in-
+ * puts.
+ */
+
+const inputBorder1 = document.getElementById("vTopLeft");
+const inputBorder2 = document.getElementById("vTopRight");
+const inputBorder3 = document.getElementById("vBottomLeft");
+const inputBorder4 = document.getElementById("vBottomRight");
 
 const previewBorder = document.querySelector(".preview");
 
-const code          = document.querySelector(".code");
-const chkCss3       = document.getElementById("css3");
-const chkMoz        = document.getElementById("moz");
-const chkWebkit     = document.getElementById("webkit");
+function process(e) {
+  let key = e.which || e.keyCode;
+  let keyEnterPressed = key == 13;
 
-function keyEnter(e) {
-    let key = e.which || e.keyCode;
-    let keyEnterPressed = (key == 13);
+  let inputBorderValue1 = inputBorder1.value;
+  let inputBorderValue2 = inputBorder2.value;
+  let inputBorderValue3 = inputBorder3.value;
+  let inputBorderValue4 = inputBorder4.value;
 
-    let inputBorderValue1 = inputBorder1.value;
-    let inputBorderValue2 = inputBorder2.value;
-    let inputBorderValue3 = inputBorder3.value;
-    let inputBorderValue4 = inputBorder4.value;
+  if (keyEnterPressed || e.buttons == 0) {
+    previewBorder.style.borderTopLeftRadius = inputBorderValue1 + "px";
+    previewBorder.style.borderTopRightRadius = inputBorderValue2 + "px";
+    previewBorder.style.borderBottomLeftRadius = inputBorderValue3 + "px";
+    previewBorder.style.borderBottomRightRadius = inputBorderValue4 + "px";
 
-    let css3Checked   = chkCss3.checked == true;
-    let mozChecked    = chkMoz.checked == true;
-    let webkitChecked = chkWebkit.checked == true;
-
-    if(keyEnterPressed || e.buttons == 0) {
-
-        previewBorder.style.borderTopLeftRadius = inputBorderValue1  + "px";
-        previewBorder.style.borderTopRightRadius = inputBorderValue2  + "px";
-        previewBorder.style.borderBottomLeftRadius = inputBorderValue3  + "px";
-        previewBorder.style.borderBottomRightRadius = inputBorderValue4  + "px";
-
-        if (css3Checked && !(mozChecked) && !(webkitChecked)) 
-        {
-            code.innerHTML = "border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-        }
-
-        else if (mozChecked && !(css3Checked) && !(webkitChecked))
-        {
-            code.innerHTML = "-moz-border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-        }
-
-        else if (webkitChecked && !(mozChecked) && !(css3Checked))
-        {
-            code.innerHTML = "-webkit-border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";           
-        }
-
-        else if (css3Checked && mozChecked && !(webkitChecked))
-        {
-            code.innerHTML = "border-radius: " 
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-            code.innerHTML += "<br/>-moz-border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-        }
-        
-        else if (css3Checked && !(mozChecked) && webkitChecked)
-        {
-            code.innerHTML = "border-radius: " 
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-            code.innerHTML += "<br/>-webkit-border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-        }
-
-        else if (!(css3Checked) && mozChecked && webkitChecked)
-        {
-            code.innerHTML = "-moz-border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-            code.innerHTML += "<br/>-webkit-border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-        }
-
-
-        else if (css3Checked && mozChecked && webkitChecked)
-        {
-            code.innerHTML = "border-radius: " 
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-            code.innerHTML += "<br/>-moz-border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";
-            code.innerHTML += "<br/>-webkit-border-radius: "
-                                    + inputBorderValue1 + "px "
-                                    + inputBorderValue2 + "px "
-                                    + inputBorderValue3 + "px "
-                                    + inputBorderValue4 + "px;";        }
-    }
-
+    codeBox(
+      inputBorderValue1,
+      inputBorderValue2,
+      inputBorderValue3,
+      inputBorderValue4
+    );
+  }
 }
 
-inputBorder1.addEventListener("keydown", keyEnter);
-inputBorder2.addEventListener("keydown", keyEnter);
-inputBorder3.addEventListener("keydown", keyEnter);
-inputBorder4.addEventListener("keydown", keyEnter);
+inputBorder1.addEventListener("keydown", process);
+inputBorder2.addEventListener("keydown", process);
+inputBorder3.addEventListener("keydown", process);
+inputBorder4.addEventListener("keydown", process);

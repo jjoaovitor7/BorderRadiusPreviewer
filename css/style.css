@@ -5,12 +5,7 @@
 }
 
 body {
-    background: #adfcea;
-    background: linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
-    background: -moz-linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
-    background: -webkit-linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
-    background: -o-linear-gradient(95deg, #adfcea 30%, #c0e5f6 65%);
-
+    background: #dddddd;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,14 +14,14 @@ body {
 
 /* Header */
 header {
-    background-color: #34574f;
+    background-color: #39cccc;
     width: 100%;
     text-align: center;
 }
 header h1 {
     font-family: 'Times New Roman', Times, serif;
     margin: 10px 0;
-    color: #fff;
+    color: #111;
 }
 /**********/
 
@@ -137,7 +132,7 @@ button:active {
 
 /* Footer */
 footer {
-    background-color: #34574f;
+    background-color: #39cccc;
 
     position: fixed;
     bottom: 0;
@@ -148,9 +143,9 @@ footer {
 }
 
 footer p {
-    text-shadow: 4px 4px 8px #00ffff;
+    text-shadow: 4px 4px 8px #113838;
     font-size: 18px;
-    color: #fff;
+    color: #111;
     font-family: 'Lobster', cursive;
 }
 /**********/

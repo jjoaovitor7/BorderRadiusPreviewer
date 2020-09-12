@@ -6,6 +6,13 @@
  * border-radius.
  */
 
+/** en
+ * This file is responsible for the manipulation of the reset button,
+ * is added an click event that when click the input values declared in
+ * main.js file are reseted, in other words, the inputs values are
+ * setted for 0 e equally in border-radius preview.
+ */
+
 const buttonReset = document.getElementById("btn-reset");
 
 function reset(e) {

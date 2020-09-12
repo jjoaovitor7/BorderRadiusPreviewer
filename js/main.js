@@ -2,11 +2,22 @@
  * Este é o arquivo principal da aplicação, é nele que está
  * a declaração dos inputs, do preview e da função process,
  * sendo a mesma que irá processar a alteração do preview,
- * (com exceção do reset, que o arquivo responsável é o reset.css),
+ * (com exceção do reset, que o arquivo responsável é o reset.js),
  * verificando se a tecla pressionado foi o Enter/Return e
  * acionando a função codeBox(params) do arquivo code.js e
  * também adicionando os eventos de clique da tecla nos in-
  * puts.
+ */
+
+/** en
+ * This is the main file of the app, is in this that is the
+ * declaration of the inputs, of the preview and of the pr-
+ * ocess function, being the same that will process the the
+ * change of the preview (with except of the reset, that t-
+ * he responsible file is the reset.js), checking if the k-
+ * ey pressed is the Enter/Return and triggering the
+ * codeBox(params) function of the code.js file and too ad-
+ * ding keyboard click events in inputs.
  */
 
 const inputBorder1 = document.getElementById("vTopLeft");

@@ -4,5 +4,11 @@
  * irá chamar a função process do arquivo main.js.
  */
 
+/** en
+ * This file is responsible for manipulation of the send button,
+ * a click event is added that to click on the button it will
+ * call the process function from the main.js file.
+ */
+
 const buttonSend = document.getElementById("btn-enviar");
 buttonSend.addEventListener("click", process);

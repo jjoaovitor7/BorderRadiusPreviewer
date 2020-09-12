@@ -12,11 +12,14 @@ body {
     align-items: center;
 }
 
+
 /* Header */
 header {
     background-color: #39cccc;
     width: 100%;
     text-align: center;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 header h1 {
     font-family: 'Times New Roman', Times, serif;

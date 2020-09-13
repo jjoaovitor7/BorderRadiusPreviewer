@@ -25,7 +25,6 @@ function process(e) {
 
   if (keyEnterPressed || e.buttons == 0) {
     changeBorder(
-      previewBorder,
       inputBorderValue1,
       inputBorderValue2,
       inputBorderValue3,

@@ -1,12 +1,14 @@
 /** pt_BR
- * Esse arquivo é responsável pela mudança no border-radius no preview,
- * essa função é chamada no arquivo main.js.
+ * Esse arquivo é responsável pela alteração do border-radius do
+ * preview, contendo umma função que altera-o chamada
+ * changeBorder(params), essa função é chamada no arquivo main.js.
  */
-const previewBorder = document.querySelector(".preview");
+
+const preview = document.querySelector(".preview");
 
 function changeBorder(input1, input2, input3, input4) {
-  previewBorder.style.borderTopLeftRadius = input1 + "px";
-  previewBorder.style.borderBottomLeftRadius = input3 + "px";
-  previewBorder.style.borderTopRightRadius = input2 + "px";
-  previewBorder.style.borderBottomRightRadius = input4 + "px";
+  preview.style.borderTopLeftRadius = input1 + "px";
+  preview.style.borderBottomLeftRadius = input3 + "px";
+  preview.style.borderTopRightRadius = input2 + "px";
+  preview.style.borderBottomRightRadius = input4 + "px";
 }

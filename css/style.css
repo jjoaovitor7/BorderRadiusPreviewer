@@ -133,6 +133,7 @@ button:active {
     display: none;
 }
 
+
 /* Footer */
 footer {
     background-color: #39cccc;
@@ -160,7 +161,6 @@ footer p {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
-    
     header h1 {
         font-size: 28px;
     }
@@ -171,7 +171,6 @@ footer p {
         width: 350px;
         height: 350px;
     }
-
     .container button {
         margin-bottom: 5px;
     }

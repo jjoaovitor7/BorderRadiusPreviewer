@@ -169,7 +169,7 @@ footer p {
         display: flex;
         flex-direction: column;
         width: 350px;
-        height: 350px;
+        height: 355px;
     }
     .container button {
         margin-bottom: 5px;
@@ -189,7 +189,7 @@ footer p {
 
     .preview {
         margin-right: 15px;
-        height: 80px;
+        height: 100px;
     }
 
     .code {

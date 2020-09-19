@@ -5,7 +5,9 @@
 }
 
 body {
-    background: #dddddd;
+    background: #0093E9;
+    background: linear-gradient(0deg, #0093E9 0%, #80D0C7 100%);
+
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     background: #0093E9;
     background: linear-gradient(0deg, #0093E9 0%, #80D0C7 100%);

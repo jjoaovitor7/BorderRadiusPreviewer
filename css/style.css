@@ -152,9 +152,6 @@ button:active {
 
 .help img {
     cursor: pointer;
-    transform: skewY(10deg);
-    -moz-transform: skewY(10deg);
-    -webkit-transform: skewY(10deg);
 
     filter: drop-shadow(10px 5px 5px #4444dd) contrast(1.3);
     -moz-filter: drop-shadow(10px 5px 5px #4444dd) contrast(1.3);

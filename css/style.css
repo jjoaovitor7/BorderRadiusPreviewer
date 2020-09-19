@@ -16,7 +16,7 @@ body {
 /* Header */
 header {
     background: #39cccc;
-    background-image: url('assets/headerANDfooter.jpg');
+    background-image: url('../assets/headerANDfooter.jpg');
     width: 100%;
     text-align: center;
     border-bottom-left-radius: 100px;
@@ -138,7 +138,7 @@ button:active {
 /* Footer */
 footer {
     background-color: #39cccc;
-    background-image: url('assets/headerANDfooter.jpg');
+    background-image: url('../assets/headerANDfooter.jpg');
     position: fixed;
     bottom: 0;
     left: 0;

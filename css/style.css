@@ -15,7 +15,8 @@ body {
 
 /* Header */
 header {
-    background-color: #39cccc;
+    background: #39cccc;
+    background-image: url('/assets/headerANDfooter.jpg');
     width: 100%;
     text-align: center;
     border-bottom-left-radius: 100px;
@@ -24,7 +25,7 @@ header {
 header h1 {
     font-family: 'Times New Roman', Times, serif;
     margin: 10px 0;
-    color: #111;
+    color: #fff;
 }
 /**********/
 
@@ -137,7 +138,7 @@ button:active {
 /* Footer */
 footer {
     background-color: #39cccc;
-
+    background-image: url('/assets/headerANDfooter.jpg');
     position: fixed;
     bottom: 0;
     left: 0;

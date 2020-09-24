@@ -66,10 +66,13 @@ header h1 {
     margin-left: 10px;
 }
 input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+
     width: 125px;
     background-color: #008cba;
     border: none;
-
     padding: 16px 32px;
     margin-bottom: 5px;
     margin-right: 10px;
@@ -77,6 +80,10 @@ input[type="number"] {
     transition: width 0.4s ease-in-out;
     -moz-transition: width 0.4s ease-in-out;
     -webkit-transition: width 0.4s ease-in-out;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
 }
 input[type="number"]:focus{
     width: 150px;

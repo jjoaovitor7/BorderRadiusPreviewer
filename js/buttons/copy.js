@@ -12,6 +12,8 @@
  * he document.
  */
 
+const buttonCopy = document.getElementById("btn-copy");
+
 function copyCode() {
   let text = code.innerText;
   let elem = document.createElement("textarea"); // elem -> element
@@ -24,3 +26,5 @@ function copyCode() {
 
   document.body.removeChild(elem);
 }
+
+buttonCopy.addEventListener("click", copyCode);

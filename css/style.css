@@ -238,20 +238,13 @@ footer p {
     width: 350px;
     height: 300px;
   }
-  .container:nth-child(3){
-    margin-top: 35px;
-  }
+
   .container button {
-    margin-bottom: 5px;
+    margin: 0 auto 5px auto;
   }
 
   .preview {
-    margin-bottom: 10px;
-    margin-left: 22.5px;
-  }
-
-  .container label {
-    margin-bottom: 5px;
+    margin: 0 auto 10px 10px;
   }
 
   .preview {
@@ -259,7 +252,11 @@ footer p {
     height: 100px;
   }
 
-  .code {
-    margin-bottom: 10px;
+  #btn-copy {
+    margin: 10px 0;
+  }
+
+  .container-checkboxes {
+    margin: 5px auto;
   }
 }

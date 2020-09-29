@@ -39,6 +39,16 @@ header h1 {
 }
 /**********/
 
+#info {
+  position: absolute;
+  width: 25%;
+  top: 180px;
+  left: 0;
+  font-size: 14px;
+  text-align: justify;
+  margin-left: 15px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -47,11 +57,11 @@ header h1 {
   width: 800px;
   height: 250px;
 }
-.container:nth-child(2) {
-  margin-top: 50px;
+.container:nth-child(3){
+  margin-top: 80px;
 }
-.container:nth-child(3) {
-  margin-top: -25px;
+.container:nth-child(4){
+  margin-top: -50px;
 }
 
 .container label {
@@ -156,6 +166,8 @@ button:active {
 
 .container-checkboxes label {
   margin-right: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
 }
 
 .help {

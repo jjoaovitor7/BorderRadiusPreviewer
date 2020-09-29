@@ -25,16 +25,41 @@
       <h1>Border Radius Previewer</h1>
     </header>
 
+    <div id="info">
+      <p>Olá! Esse é o meu BorderRadiusPreviewer.</p>
+      
+      <br />
+      <h3>Como funciona?</h3>
+      <p>É simples, digitando os valores nos campos setados inicialmente em 0.</p>
+      
+      <br />
+      <p>Obs.1: Para saber qual o canto que você quer alterar é necessário deixar o campo em branco, ou seja, apagando todos os caracteres dele.</p>
+      <br />
+      <p>Obs.2: Ao clicar em resetar o preview é resetado e é apresentado um código com os 3 tipos de implementação.</p>
+    </div>
+
     <div class="container">
       <div class="container-borders">
-        <input type="number" placeholder="top-left" value="0" id="vTopLeft" />
-        <input type="number" placeholder="top-right" value="0" id="vTopRight" />
+        <input
+          type="number"
+          placeholder="top-left"
+          value="0"
+          id="vTopLeft"
+        />
+
+        <input
+          type="number" 
+          placeholder="top-right"
+          value="0" id="vTopRight"
+        />
+
         <input
           type="number"
           placeholder="bottom-left"
           value="0"
           id="vBottomLeft"
         />
+
         <input
           type="number"
           placeholder="bottom-right"
@@ -42,33 +67,26 @@
           id="vBottomRight"
         />
       </div>
+
       <button id="btn-reset">Resetar</button>
 
       <div class="preview"></div>
     </div>
 
     <div class="container">
-      <p class="code"></p>
+      <p class="code">border-radius: 0px 0px 0px 0px;</p>
       <br />
 
       <button id="btn-copy">Copiar</button>
 
       <div class="container-checkboxes">
-        <input type="checkbox" name="css3" id="css3" />
+        <input type="checkbox" name="css3" id="css3" checked />
         <label>css3</label>
         <input type="checkbox" name="moz" id="moz" />
         <label>moz</label>
         <input type="checkbox" name="webkit" id="webkit" />
         <label>webkit</label>
       </div>
-    </div>
-
-    <div class="help">
-      <span class="span-help">
-        É só digitar os valores e logo após retirar e clicar com o mouse fora da
-        área do&nbsp;<i>input</i>
-      </span>
-      <img class="img-help" src="./assets/help.png" height="50px" />
     </div>
 
     <footer>

@@ -219,6 +219,12 @@ footer p {
     font-size: 28px;
   }
 
+  #info {
+    position: relative;
+    width: 80%;
+    top: 25px;
+  }
+
   input[type="number"] {
     padding: 5px 10px;
   }

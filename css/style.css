@@ -40,29 +40,20 @@ header h1 {
 /**********/
 
 .container {
-  border: 5px solid #000;
-  -moz-border: 5px solid #000;
-  -webkit-border: 5px solid #000;
-
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-
-  box-shadow: 4px 4px 8px #000;
-  -moz-box-shadow: 4px 4px 8px #000;
-  -webkit-box-shadow: 4px 4px 8px #000;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 800px;
   height: 250px;
-  margin-bottom: 5px;
+}
+.container:nth-child(2) {
+  margin-top: 50px;
 }
 .container:nth-child(3) {
-  background: #fff;
+  margin-top: -25px;
 }
+
 .container label {
   margin-left: 10px;
 }
@@ -128,9 +119,9 @@ button:active {
 }
 
 .preview {
-  border: 1px solid #000;
-  -moz-border: 1px solid #000;
-  -webkit-border: 1px solid #000;
+  border: 3px solid #000;
+  -moz-border: 3px solid #000;
+  -webkit-border: 3px solid #000;
 
   width: 100px;
   height: 100px;
@@ -224,13 +215,10 @@ footer p {
     display: flex;
     flex-direction: column;
     width: 350px;
-    height: 355px;
+    height: 300px;
   }
   .container button {
     margin-bottom: 5px;
-  }
-  .container button:nth-child(2) {
-    margin-top: 5px;
   }
 
   .preview {
@@ -249,20 +237,5 @@ footer p {
 
   .code {
     margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container:nth-child(2) {
-    border: none;
-    -moz-border: none;
-    -webkit-border: none;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-  }
-
-  .container:nth-child(3) {
-    margin-bottom: 50px;
   }
 }

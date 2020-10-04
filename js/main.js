@@ -1,29 +1,29 @@
-/** pt_BR
- * Este é o arquivo principal da aplicação, é nele que está
- * a declaração dos inputs e da função process, (com exceç-
- * ão do reset, que o arquivo responsável é o reset.js), o
- * acionamento das funções changeBorder(params) do mesmo arqu-
- * ivo e codeBox(params) do arquivo code.js e também adici-
- * onando os eventos nos inputs.
- */
+///// imports /////
+import changeBorder from "./changeBorder.js";
+import resetAll from "./buttons/reset.js";
+import codeBox from "./codeBox.js";
+import copyCode from "./buttons/copy.js"
+///////////////////
 
-const inputBorder1 = document.getElementById("vTopLeft");
-const inputBorder2 = document.getElementById("vTopRight");
-const inputBorder3 = document.getElementById("vBottomLeft");
-const inputBorder4 = document.getElementById("vBottomRight");
 
-const preview = document.querySelector(".preview");
-function changeBorder(input1, input2, input3, input4) {
-  /**
-   * Função responsável pela alteração do border-radius do preview.
-   */
-  preview.style.borderTopLeftRadius = input1 + "px";
-  preview.style.borderBottomLeftRadius = input3 + "px";
-  preview.style.borderTopRightRadius = input2 + "px";
-  preview.style.borderBottomRightRadius = input4 + "px";
-}
+///// inputs /////
+const inputBorder1 = document.getElementById("border-top-left");
+const inputBorder2 = document.getElementById("border-bottom-left");
+const inputBorder3 = document.getElementById("border-top-right");
+const inputBorder4 = document.getElementById("border-bottom-right");
+//////////////////
+
+
+///// botões /////
+const btnReset = document.getElementById("btn-reset");
+const btnCopy  = document.getElementById("btn-copy");
+//////////////////
+
 
 function process(e) {
+  /**
+   * Função pelo processamento das funções changeBorder e codeBox.
+   */
 
   let inputBorderValue1 = inputBorder1.value;
   let inputBorderValue2 = inputBorder2.value;
@@ -45,7 +45,19 @@ function process(e) {
   );
 }
 
+function resetValues(){
+  resetAll();
+}
+
+///// inputs event /////
 inputBorder1.addEventListener("change", process);
 inputBorder2.addEventListener("change", process);
 inputBorder3.addEventListener("change", process);
 inputBorder4.addEventListener("change", process);
+////////////////////////
+
+
+///// botões event /////
+btnReset.addEventListener("click", resetValues);
+btnCopy.addEventListener("click", copyCode);
+////////////////////////

@@ -45,9 +45,6 @@ function process(e) {
   );
 }
 
-function resetValues(){
-  resetAll();
-}
 
 ///// inputs event /////
 inputBorder1.addEventListener("change", process);
@@ -58,6 +55,6 @@ inputBorder4.addEventListener("change", process);
 
 
 ///// botões event /////
-btnReset.addEventListener("click", resetValues);
+btnReset.addEventListener("click", resetAll);
 btnCopy.addEventListener("click", copyCode);
 ////////////////////////

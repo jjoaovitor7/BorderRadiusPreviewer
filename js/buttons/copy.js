@@ -1,20 +1,12 @@
-/** pt_BR
- * Esse é um arquivo responsável pela criação de uma textarea
- * para que então seja adicionada no documento para a seleção
- * e cópia do conteúdo do código e logo após removida do doc-
- * umento.
- */
+function copyCode(e) {
+  /**
+   * Função responsável pela criação de uma textarea para que então seja
+   * adicionada no documento para a seleção e cópia do conteúdo do códi-
+   * go e logo após removida do documento.
+   */
 
-/** en
- * This is a file that is responsible for creation of a text-
- * area for that so be added in the document for the selecti-
- * on and copy of the code content e soon after removed of t-
- * he document.
- */
+  const code = document.querySelector(".code");
 
-const buttonCopy = document.getElementById("btn-copy");
-
-function copyCode() {
   let text = code.innerText;
   let elem = document.createElement("textarea"); // elem -> element
 
@@ -27,4 +19,4 @@ function copyCode() {
   document.body.removeChild(elem);
 }
 
-buttonCopy.addEventListener("click", copyCode);
+export default copyCode;

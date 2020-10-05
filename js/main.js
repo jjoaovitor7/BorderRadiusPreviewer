@@ -20,6 +20,13 @@ const btnCopy  = document.getElementById("btn-copy");
 //////////////////
 
 
+///// checkboxes /////
+const chkCSS3 = document.getElementById("css3");
+const chkMOZ = document.getElementById("moz");
+const chkWEBKIT = document.getElementById("webkit");
+//////////////////////
+
+
 function process(e) {
   /**
    * Função pelo processamento das funções changeBorder e codeBox.
@@ -58,3 +65,10 @@ inputBorder4.addEventListener("change", process);
 btnReset.addEventListener("click", resetAll);
 btnCopy.addEventListener("click", copyCode);
 ////////////////////////
+
+
+///// checkboxes event /////
+chkCSS3.addEventListener("click", process);
+chkMOZ.addEventListener("click", process);
+chkWEBKIT.addEventListener("click", process);
+////////////////////////////

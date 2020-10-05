@@ -8,10 +8,10 @@ function codeBox(input1, input2, input3, input4) {
    */
 
   ///// checkboxes /////
-  const css3Checked = document.getElementById("css3").checked == true;
-  const mozChecked = document.getElementById("moz").checked == true;
-  const webkitChecked = document.getElementById("webkit").checked == true;
-  const allCheckboxesChecked = css3Checked && mozChecked && webkitChecked;
+  const CSS3Checked = document.getElementById("css3").checked == true;
+  const MOZChecked = document.getElementById("moz").checked == true;
+  const WEBKITChecked = document.getElementById("webkit").checked == true;
+  const allCheckboxesChecked = CSS3Checked && MOZChecked && WEBKITChecked;
   //////////////////////
 
   const code = document.querySelector(".code");
@@ -33,7 +33,7 @@ function codeBox(input1, input2, input3, input4) {
   }
 
   // se o checkbox do css3 estiver checkado
-  if (css3Checked && !mozChecked && !webkitChecked) {
+  if (CSS3Checked && !MOZChecked && !WEBKITChecked) {
     code.innerHTML =
       "border-radius: " +
       input1 +
@@ -47,7 +47,7 @@ function codeBox(input1, input2, input3, input4) {
   }
 
   // se o checkbox do moz estiver checkado
-  else if (mozChecked && !css3Checked && !webkitChecked) {
+  else if (MOZChecked && !CSS3Checked && !WEBKITChecked) {
     code.innerHTML =
       "-moz-border-radius: " +
       input1 +
@@ -61,7 +61,7 @@ function codeBox(input1, input2, input3, input4) {
   }
 
   // se o checkbox do webkit estiver checkado
-  else if (webkitChecked && !mozChecked && !css3Checked) {
+  else if (WEBKITChecked && !MOZChecked && !CSS3Checked) {
     code.innerHTML =
       "-webkit-border-radius: " +
       input1 +
@@ -75,7 +75,7 @@ function codeBox(input1, input2, input3, input4) {
   }
 
   // se o checkbox do css3 e do moz estiverem checkados
-  else if (css3Checked && mozChecked && !webkitChecked) {
+  else if (CSS3Checked && MOZChecked && !WEBKITChecked) {
     code.innerHTML =
       "border-radius: " +
       input1 +
@@ -99,7 +99,7 @@ function codeBox(input1, input2, input3, input4) {
   }
 
   // se o checkbox do css3 e do webkit estiverem checkados
-  else if (css3Checked && !mozChecked && webkitChecked) {
+  else if (CSS3Checked && !MOZChecked && WEBKITChecked) {
     code.innerHTML =
       "border-radius: " +
       input1 +
@@ -123,7 +123,7 @@ function codeBox(input1, input2, input3, input4) {
   }
 
   // se o checkbox do moz e do webkit estiverem checkados
-  else if (!css3Checked && mozChecked && webkitChecked) {
+  else if (!CSS3Checked && MOZChecked && WEBKITChecked) {
     code.innerHTML =
       "-moz-border-radius: " +
       input1 +

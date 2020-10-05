@@ -1,3 +1,8 @@
+///// imports /////
+import codeBox from "../codeBox.js";
+///////////////////
+
+
 function resetAll(e) {
   /**
    * Função responsável por resetar todos os valores, em outras palavras,
@@ -12,24 +17,7 @@ function resetAll(e) {
 
   document.querySelector(".preview").style.borderRadius = "0px";
 
-  const code = document.querySelector(".code");
-  code.innerHTML = "border-radius: "
-                 + "0px "
-                 + "0px "
-                 + "0px "
-                 + "0px;";
-
-  code.innerHTML += "<br/>-moz-border-radius: "
-                 + "0px "
-                 + "0px "
-                 + "0px "
-                 + "0px;";
-
-  code.innerHTML += "<br/>-webkit-border-radius: "
-                 + "0px "
-                 + "0px "
-                 + "0px "
-                 + "0px;";
+  codeBox(0, 0, 0, 0);
 }
 
 export default resetAll;

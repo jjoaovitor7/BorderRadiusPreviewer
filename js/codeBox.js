@@ -16,6 +16,22 @@ function codeBox(input1, input2, input3, input4) {
 
   const code = document.querySelector(".code");
 
+  if (input1 == ""){
+    input1 = 0;
+  }
+  
+  if (input2 == ""){
+    input2 = 0;
+  }
+
+  if (input3 == ""){
+    input3 = 0;
+  }
+
+  if (input4 == ""){
+    input4 = 0;
+  }
+
   // se o checkbox do css3 estiver checkado
   if (css3Checked && !mozChecked && !webkitChecked) {
     code.innerHTML =
@@ -162,6 +178,9 @@ function codeBox(input1, input2, input3, input4) {
       "px " +
       input4 +
       "px;";
+  }
+  else {
+    code.innerHTML = '&nbsp;';
   }
 }
 

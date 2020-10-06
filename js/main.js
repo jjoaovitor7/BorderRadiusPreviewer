@@ -26,50 +26,50 @@ class BorderRadiusPreviewer {
       //////////////////////
     }
 
-  process(e) {
-    /**
-     * Função pelo processamento das funções changeBorder e codeBox.
-     */
+    process(e) {
+      /**
+       * Função pelo processamento das funções changeBorder e codeBox.
+       */
 
-    let inputBorderValue1 = this.inputBorder1.value;
-    let inputBorderValue2 = this.inputBorder2.value;
-    let inputBorderValue3 = this.inputBorder3.value;
-    let inputBorderValue4 = this.inputBorder4.value;
+      let inputBorderValue1 = this.inputBorder1.value;
+      let inputBorderValue2 = this.inputBorder2.value;
+      let inputBorderValue3 = this.inputBorder3.value;
+      let inputBorderValue4 = this.inputBorder4.value;
 
-    changeBorder(
-      inputBorderValue1,
-      inputBorderValue2,
-      inputBorderValue3,
-      inputBorderValue4
-    );
+      changeBorder(
+        inputBorderValue1,
+        inputBorderValue2,
+        inputBorderValue3,
+        inputBorderValue4
+      );
 
-    codeBox(
-      inputBorderValue1,
-      inputBorderValue2,
-      inputBorderValue3,
-      inputBorderValue4
-    );
-  }
+      codeBox(
+        inputBorderValue1,
+        inputBorderValue2,
+        inputBorderValue3,
+        inputBorderValue4
+      );
+    }
 
-  observers(e) {
-    ///// inputs event /////
-    this.inputBorder1.addEventListener("change", this.process);
-    this.inputBorder2.addEventListener("change", this.process);
-    this.inputBorder3.addEventListener("change", this.process);
-    this.inputBorder4.addEventListener("change", this.process);
-    ////////////////////////
+    observers(e) {
+      ///// inputs event /////
+      this.inputBorder1.addEventListener("change", this.process);
+      this.inputBorder2.addEventListener("change", this.process);
+      this.inputBorder3.addEventListener("change", this.process);
+      this.inputBorder4.addEventListener("change", this.process);
+      ////////////////////////
 
-    ///// botões event /////
-    this.btnReset.addEventListener("click", resetAll);
-    this.btnCopy.addEventListener("click", copyCode);
-    ////////////////////////
+      ///// botões event /////
+      this.btnReset.addEventListener("click", resetAll);
+      this.btnCopy.addEventListener("click", copyCode);
+      ////////////////////////
 
-    ///// checkboxes event /////
-    this.chkCSS3.addEventListener("click", this.process);
-    this.chkMOZ.addEventListener("click", this.process);
-    this.chkWEBKIT.addEventListener("click", this.process);
-    ////////////////////////////
-  }
+      ///// checkboxes event /////
+      this.chkCSS3.addEventListener("click", this.process);
+      this.chkMOZ.addEventListener("click", this.process);
+      this.chkWEBKIT.addEventListener("click", this.process);
+      ////////////////////////////
+    }
 }
 
 let main = new BorderRadiusPreviewer();

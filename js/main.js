@@ -28,7 +28,7 @@ class BorderRadiusPreviewer {
 
   process(e) {
     /**
-     * Função pelo processamento das funções changeBorder e codeBox.
+     * Função responsável pelo processamento das funções changeBorder e codeBox.
      */
 
     let inputBorderValue1 = this.inputBorder1.value;

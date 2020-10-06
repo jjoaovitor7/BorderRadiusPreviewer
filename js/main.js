@@ -6,24 +6,24 @@ import copyCode from "./buttons/copy.js";
 ///////////////////
 
 class BorderRadiusPreviewer {
-    ///// inputs /////
     constructor(){
+      ///// inputs /////
       this.inputBorder1 = document.getElementById("border-top-left");
       this.inputBorder2 = document.getElementById("border-bottom-left");
       this.inputBorder3 = document.getElementById("border-top-right");
       this.inputBorder4 = document.getElementById("border-bottom-right");
-    //////////////////
+      //////////////////
 
-    ///// botões /////
-    this.btnReset = document.getElementById("btn-reset");
-    this.btnCopy = document.getElementById("btn-copy");
-    //////////////////
+      ///// botões /////
+      this.btnReset = document.getElementById("btn-reset");
+      this.btnCopy = document.getElementById("btn-copy");
+      //////////////////
 
-    ///// checkboxes /////
-    this.chkCSS3 = document.getElementById("css3");
-    this.chkMOZ = document.getElementById("moz");
-    this.chkWEBKIT = document.getElementById("webkit");
-    //////////////////////
+      ///// checkboxes /////
+      this.chkCSS3 = document.getElementById("css3");
+      this.chkMOZ = document.getElementById("moz");
+      this.chkWEBKIT = document.getElementById("webkit");
+      //////////////////////
     }
 
   process(e) {

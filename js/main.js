@@ -6,11 +6,12 @@ import copyCode from "./buttons/copy.js";
 ///////////////////
 
 class BorderRadiusPreviewer {
+    ///// inputs /////
     constructor(){
-    this.inputBorder1 = document.getElementById("border-top-left");
-    this.inputBorder2 = document.getElementById("border-bottom-left");
-    this.inputBorder3 = document.getElementById("border-top-right");
-    this.inputBorder4 = document.getElementById("border-bottom-right");
+      this.inputBorder1 = document.getElementById("border-top-left");
+      this.inputBorder2 = document.getElementById("border-bottom-left");
+      this.inputBorder3 = document.getElementById("border-top-right");
+      this.inputBorder4 = document.getElementById("border-bottom-right");
     //////////////////
 
     ///// botões /////

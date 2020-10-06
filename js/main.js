@@ -31,10 +31,11 @@ class BorderRadiusPreviewer {
      * Função responsável pelo processamento das funções changeBorder e codeBox.
      */
 
-    let inputBorderValue1 = this.inputBorder1.value;
-    let inputBorderValue2 = this.inputBorder2.value;
-    let inputBorderValue3 = this.inputBorder3.value;
-    let inputBorderValue4 = this.inputBorder4.value;
+    let _instance = new BorderRadiusPreviewer();
+    let inputBorderValue1 = _instance.inputBorder1.value;
+    let inputBorderValue2 = _instance.inputBorder2.value;
+    let inputBorderValue3 = _instance.inputBorder3.value;
+    let inputBorderValue4 = _instance.inputBorder4.value;
 
     changeBorder(
       inputBorderValue1,

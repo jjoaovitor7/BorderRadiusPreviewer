@@ -1,9 +1,20 @@
 ///// imports /////
-import changeBorder from "./changeBorder.js";
-import resetAll from "./buttons/reset.js";
-import codeBox from "./codeBox.js";
-import copyCode from "./buttons/copy.js";
+import ButtonReset from "./buttons/ButtonReset.js";
+import CodeBox from "./CodeBox.js";
+import ButtonCopy from "./buttons/ButtonCopy.js";
 ///////////////////
+
+function changeBorder(input1, input2, input3, input4) {
+  /**
+   * Função responsável pela alteração do border-radius do preview.
+   */
+
+  const preview = document.querySelector(".preview");
+  preview.style.borderTopLeftRadius = input1 + "px";
+  preview.style.borderBottomLeftRadius = input3 + "px";
+  preview.style.borderTopRightRadius = input2 + "px";
+  preview.style.borderBottomRightRadius = input4 + "px";
+}
 
 class BorderRadiusPreviewer {
   constructor() {
@@ -31,11 +42,17 @@ class BorderRadiusPreviewer {
      * Função responsável pelo processamento das funções changeBorder e codeBox.
      */
 
-    let _instance = new BorderRadiusPreviewer();
-    let inputBorderValue1 = _instance.inputBorder1.value;
-    let inputBorderValue2 = _instance.inputBorder2.value;
-    let inputBorderValue3 = _instance.inputBorder3.value;
-    let inputBorderValue4 = _instance.inputBorder4.value;
+    /////  instances /////
+    let _instanceThis = new BorderRadiusPreviewer();
+    let _instanceCodeBox = new CodeBox();
+    //////////////////////
+
+    ///// input values /////
+    let inputBorderValue1 = _instanceThis.inputBorder1.value;
+    let inputBorderValue2 = _instanceThis.inputBorder2.value;
+    let inputBorderValue3 = _instanceThis.inputBorder3.value;
+    let inputBorderValue4 = _instanceThis.inputBorder4.value;
+    ////////////////////////
 
     changeBorder(
       inputBorderValue1,
@@ -44,7 +61,7 @@ class BorderRadiusPreviewer {
       inputBorderValue4
     );
 
-    codeBox(
+    _instanceCodeBox.generateCode(
       inputBorderValue1,
       inputBorderValue2,
       inputBorderValue3,
@@ -53,6 +70,11 @@ class BorderRadiusPreviewer {
   }
 
   observers(e) {
+    ///// instances /////
+    let _instanceButtonReset = new ButtonReset();
+    let _instanceButtonCopy = new ButtonCopy();
+    /////////////////////
+
     ///// inputs event /////
     this.inputBorder1.addEventListener("change", this.process);
     this.inputBorder2.addEventListener("change", this.process);
@@ -61,8 +83,8 @@ class BorderRadiusPreviewer {
     ////////////////////////
 
     ///// botões event /////
-    this.btnReset.addEventListener("click", resetAll);
-    this.btnCopy.addEventListener("click", copyCode);
+    this.btnReset.addEventListener("click", _instanceButtonReset.resetAll);
+    this.btnCopy.addEventListener("click", _instanceButtonCopy.copyCode);
     ////////////////////////
 
     ///// checkboxes event /////

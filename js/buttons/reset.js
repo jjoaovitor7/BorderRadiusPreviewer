@@ -8,6 +8,7 @@ function resetAll(e) {
    * setar os inputs para o valor 0, setar o border-radius do preview pa-
    * ra 0 e setar um código de implementação com os valores setados em 0.
    */
+
   ///// inputs /////
   const inputBorder1 = document.getElementById("border-top-left");
   const inputBorder2 = document.getElementById("border-bottom-left");

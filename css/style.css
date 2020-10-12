@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -28,32 +32,32 @@ header {
   background-image: url("../assets/headerANDfooter.jpg");
   width: 100%;
   text-align: center;
-  border-bottom: 3.5px solid #000;
+  border-bottom: 0.35rem solid #000;
 }
 header h1 {
   font-family: "Open Sans", sans-serif;
-  margin: 10px 0;
+  margin: 1rem 0;
   color: #fff;
-  font-size: 28px;
+  font-size: 2.8rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 4px 4px 2px #000;
+  letter-spacing: .2rem;
+  text-shadow: .4rem .4rem .2rem #000;
 }
 /**********/
 
 #info {
   position: absolute;
-  width: 25%;
-  top: 180px;
+  width: 25rem;
+  top: 15rem;
   left: 0;
   
   font-family: 'Times New Roman', Times, serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.5;
   text-align: justify;
 
-  margin-left: 15px;
+  margin-left: 1.5rem;
 }
 
 .container {
@@ -61,18 +65,18 @@ header h1 {
   justify-content: center;
   align-items: center;
 
-  width: 800px;
-  height: 250px;
+  width: 80rem;
+  height: 25rem;
 }
 .container:nth-child(3){
-  margin-top: 80px;
+  margin-top: 8rem;
 }
 .container:nth-child(4){
-  margin-top: -50px;
+  margin-top: -5rem;
 }
 
 .container label {
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 input[type="number"] {
   appearance: textfield;
@@ -81,12 +85,12 @@ input[type="number"] {
 
   background-color: #008cba;
   border: none;
-  border-radius: 10px;
-  box-shadow: -2px 2px 1px #000;
+  border-radius: 1rem;
+  box-shadow: -.2rem .2rem .1rem #000;
 
-  margin: 0 10px 5px 0;
-  padding: 16px 32px;
-  width: 125px;
+  margin: 0 1rem .5rem 0;
+  padding: 1.6rem 3.2rem;
+  width: 12.5rem;
 
   transition: width 0.4s ease-in-out;
   -moz-transition: width 0.4s ease-in-out;
@@ -97,7 +101,7 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 input[type="number"]:focus {
-  width: 150px;
+  width: 15rem;
 }
 
 .container-borders {
@@ -110,18 +114,18 @@ button {
   border: none;
 
   color: #fff;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.6rem;
 
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: .1rem .1rem .1rem #000;
 
   cursor: pointer;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
 
-  margin-left: 10px;
+  margin-left: 1rem;
   opacity: 0.8;
   transition: 0.4s;
 }
@@ -131,46 +135,46 @@ button:hover {
 
 button:active {
   position: relative;
-  top: 1px;
+  top: .1rem;
 }
 
 .preview {
-  border: 3px solid #000;
+  border: .3rem solid #000;
 
-  width: 100px;
-  height: 100px;
-  margin-left: 10px;
+  width: 10rem;
+  height: 10rem;
+  margin-left: 1rem;
 }
 
 .checkboxes-border {
   display: flex;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 .container .code {
   background-color: #f2f2f2;
-  border: 4px solid #000;
-  box-shadow: 4px 4px 8px #000;
-  -webkit-box-shadow: 4px 4px 8px #000;
+  border: .4rem solid #000;
+  box-shadow: .4rem .4rem .8rem #000;
+  -webkit-box-shadow: .4rem .4rem .8rem #000;
 
   font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
-  padding: 10px;
+  font-size: 1.8rem;
+  padding: 1rem;
   transition: 0.5s;
 }
 .container .code:hover {
-  box-shadow: 4px 4px 16px #000;
-  -webkit-box-shadow: 4px 4px 16px #000;
+  box-shadow: .4rem .4rem 1.6rem #000;
+  -webkit-box-shadow: .4rem .4rem 1.6rem #000;
 }
 
 .container-checkboxes {
-  margin-left: 50px;
+  margin-left: 5rem;
 }
 
 .container-checkboxes label {
-  margin-right: 10px;
+  margin-right: 1rem;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 /* Footer */
@@ -182,12 +186,12 @@ footer {
   left: 0;
   right: 0;
 
-  padding: 11.5px;
+  padding: 1.15rem;
 }
 
 footer p {
-  text-shadow: 4px 4px 8px #113838;
-  font-size: 18px;
+  text-shadow: .4rem .4rem .8rem #113838;
+  font-size: 1.8rem;
   color: #111;
   font-family: "Lobster", cursive;
 }
@@ -196,45 +200,41 @@ footer p {
 /* Media Queries */
 @media screen and (max-width: 768px) {
   header h1 {
-    font-size: 28px;
+    font-size: 2.8rem;
   }
 
   #info {
     position: relative;
     width: 80%;
-    top: 25px;
+    top: 2.5rem;
     margin: 0;
   }
 
   input[type="number"] {
-    padding: 5px 10px;
+    padding: .5rem 1rem;
   }
 
   .container {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 300px;
+    width: 35rem;
+    height: 30rem;
   }
 
   .container button {
-    margin: 0 auto 5px auto;
+    margin: 0 auto .5rem auto;
   }
 
   .preview {
-    margin: 0 auto 10px 10px;
-  }
-
-  .preview {
-    margin-right: 15px;
-    height: 100px;
+    margin-right: 1.5rem;
+    height: 10rem;
   }
 
   #btn-copy {
-    margin: 10px 0;
+    margin: 1rem 0;
   }
 
   .container-checkboxes {
-    margin: 5px auto;
+    margin: .5rem auto;
   }
 }

@@ -48,7 +48,7 @@ header h1 {
 #info {
   position: absolute;
   width: 25rem;
-  top: 15rem;
+  top: 14rem;
   left: 0;
   
   font-family: 'Times New Roman', Times, serif;
@@ -67,12 +67,13 @@ header h1 {
 
   width: 80rem;
   height: 25rem;
-}
-.container:nth-child(3){
   margin-top: 8rem;
+
 }
-.container:nth-child(4){
-  margin-top: -5rem;
+
+.container + .container {
+  height: 8.5rem;
+  margin-top: -.1rem;
 }
 
 .container label {

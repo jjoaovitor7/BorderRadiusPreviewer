@@ -40,8 +40,49 @@ header h1 {
   color: #fff;
   font-size: 2.8rem;
   text-transform: uppercase;
-  letter-spacing: .2rem;
-  text-shadow: .4rem .4rem .2rem #000;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.4rem 0.4rem 0.2rem #000;
+}
+/**********/
+
+/* SHAPEDIVIDER */
+.custom-shape-divider-top {
+  position: static;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 0;
+}
+
+.custom-shape-divider-top svg {
+  width: calc(100% + 1.3px);
+  height: 320px;
+}
+
+.custom-shape-divider-top .shape-fill {
+  fill: #4a90e2;
+  opacity: 0.5;
+}
+
+.custom-shape-divider-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 0;
+}
+
+.custom-shape-divider-bottom svg {
+  width: calc(100% + 1.3px);
+  height: 320px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: #4a90e2;
+  opacity: 0.5;
 }
 /**********/
 
@@ -50,14 +91,24 @@ header h1 {
   width: 25rem;
   top: 14rem;
   left: 0;
-  
-  font-family: 'Times New Roman', Times, serif;
+
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
   text-align: justify;
 
   margin-left: 1.5rem;
+  z-index: 1;
+}
+
+div.aux1 {
+  position: relative;
+}
+
+div.aux2 {
+  position: relative;
+  margin-top: 16rem;
 }
 
 .container {
@@ -67,13 +118,12 @@ header h1 {
 
   width: 80rem;
   height: 25rem;
-  margin-top: 8rem;
-
+  margin-top: -25rem;
+  z-index: 1;
 }
 
 .container + .container {
   height: 8.5rem;
-  margin-top: -.1rem;
 }
 
 .container label {
@@ -87,9 +137,9 @@ input[type="number"] {
   background-color: #008cba;
   border: none;
   border-radius: 1rem;
-  box-shadow: -.2rem .2rem .1rem #000;
+  box-shadow: -0.2rem 0.2rem 0.1rem #000;
 
-  margin: 0 1rem .5rem 0;
+  margin: 0 1rem 0.5rem 0;
   padding: 1.6rem 3.2rem;
   width: 12.5rem;
 
@@ -120,7 +170,7 @@ button {
   text-decoration: none;
   font-size: 1.6rem;
 
-  text-shadow: .1rem .1rem .1rem #000;
+  text-shadow: 0.1rem 0.1rem 0.1rem #000;
 
   cursor: pointer;
   border-radius: 2.5rem;
@@ -136,11 +186,11 @@ button:hover {
 
 button:active {
   position: relative;
-  top: .1rem;
+  top: 0.1rem;
 }
 
 .preview {
-  border: .3rem solid #000;
+  border: 0.3rem solid #000;
 
   width: 10rem;
   height: 10rem;
@@ -154,18 +204,18 @@ button:active {
 
 .container .code {
   background-color: #f2f2f2;
-  border: .4rem solid #000;
-  box-shadow: .4rem .4rem .8rem #000;
-  -webkit-box-shadow: .4rem .4rem .8rem #000;
+  border: 0.4rem solid #000;
+  box-shadow: 0.4rem 0.4rem 0.8rem #000;
+  -webkit-box-shadow: 0.4rem 0.4rem 0.8rem #000;
 
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.8rem;
   padding: 1rem;
   transition: 0.5s;
 }
 .container .code:hover {
-  box-shadow: .4rem .4rem 1.6rem #000;
-  -webkit-box-shadow: .4rem .4rem 1.6rem #000;
+  box-shadow: 0.4rem 0.4rem 1.6rem #000;
+  -webkit-box-shadow: 0.4rem 0.4rem 1.6rem #000;
 }
 
 .container-checkboxes {
@@ -174,7 +224,7 @@ button:active {
 
 .container-checkboxes label {
   margin-right: 1rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 2rem;
 }
 
@@ -191,7 +241,7 @@ footer {
 }
 
 footer p {
-  text-shadow: .4rem .4rem .8rem #113838;
+  text-shadow: 0.4rem 0.4rem 0.8rem #113838;
   font-size: 1.8rem;
   color: #111;
   font-family: "Lobster", cursive;
@@ -207,23 +257,34 @@ footer p {
   #info {
     position: relative;
     width: 28rem;
-    top: 4.5rem;
+    top: 0;
     margin: 0;
   }
 
   input[type="number"] {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
+  div.aux1 {
+    position: relative;
+    margin-top: 15rem;
+  }
+
+  div.aux2 {
+    position: relative;
+    top: 0rem;
+    margin-top: 0;
+  }
   .container {
     display: flex;
     flex-direction: column;
     width: 35rem;
-    height: 30rem;
+    height: 55rem;
+    top: -30rem;
   }
 
   .container button {
-    margin: 0 auto .5rem auto;
+    margin: 0 auto 0.5rem auto;
   }
 
   .preview {
@@ -236,6 +297,10 @@ footer p {
   }
 
   .container-checkboxes {
-    margin: .5rem auto;
+    margin: 0.5rem auto;
+  }
+
+  .custom-shape-divider-bottom {
+    position: relative;
   }
 }

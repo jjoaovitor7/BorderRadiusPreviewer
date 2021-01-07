@@ -266,19 +266,21 @@ footer p {
 
   div.aux1 {
     position: relative;
-    top: -10rem;
+    top: 2rem;
   }
 
   div.aux2 {
     position: relative;
-    top: -40rem;
+    top: 5rem;
   }
 
   .container {
     display: flex;
     flex-direction: column;
-    width: 35rem;
-    height: 55rem;
+  }
+
+  .container + .container {
+    position: relative;
   }
 
   .container button {

@@ -14,27 +14,37 @@ html {
   width: 100%;
 }
 
-body {
-  background: #0093e9;
-  background: linear-gradient(0deg, #0093e9 0%, #80d0c7 100%);
-  background: -moz-linear-gradient(0deg, #0093e9 0%, #80d0c7 100%);
-  background: -webkit-linear-gradient(0deg, #0093e9 0%, #80d0c7 100%);
+/* HELPERS */
+.d-flex-center-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.d-flex-center-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+/**********/
+
+body#page-home {
+  background: #0093e9;
+  background: linear-gradient(0deg, #0093e9 0%, #80d0c7 100%);
+  background: -moz-linear-gradient(0deg, #0093e9 0%, #80d0c7 100%);
+  background: -webkit-linear-gradient(0deg, #0093e9 0%, #80d0c7 100%);
+}
 
 /* Header */
-header {
+body#page-home header {
   background: #39cccc;
   background-image: url("../assets/headerANDfooter.jpg");
   width: 100%;
   text-align: center;
   border-bottom: 0.35rem solid #000;
 }
-header h1 {
+body#page-home header h1 {
   font-family: "Open Sans", sans-serif;
   margin: 1rem 0;
   color: #fff;
@@ -56,7 +66,7 @@ header h1 {
 
 .custom-shape-divider-top svg {
   width: calc(100% + 1.3px);
-  height: 320px;
+  height: 250px;
 }
 
 .custom-shape-divider-top .shape-fill {
@@ -77,7 +87,7 @@ header h1 {
 
 .custom-shape-divider-bottom svg {
   width: calc(100% + 1.3px);
-  height: 320px;
+  height: 300px;
 }
 
 .custom-shape-divider-bottom .shape-fill {
@@ -103,32 +113,21 @@ header h1 {
 }
 
 div.aux1 {
-  position: relative;
-}
-
-div.aux2 {
-  position: relative;
-  margin-top: 16rem;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 80rem;
-  height: 25rem;
-  margin-top: -25rem;
+  position: absolute;
+  top: 11.5rem;
   z-index: 1;
 }
 
-.container + .container {
-  height: 8.5rem;
+div.aux2 {
+  position: absolute;
+  top: 36.5rem;
+  z-index: 1;
 }
 
 .container label {
   margin-left: 1rem;
 }
+
 input[type="number"] {
   appearance: textfield;
   -moz-appearance: textfield;
@@ -193,7 +192,6 @@ button:active {
 
 .preview {
   border: 0.3rem solid #000;
-
   width: 10rem;
   height: 10rem;
   margin-left: 1rem;
@@ -260,7 +258,6 @@ footer p {
     position: relative;
     width: 28rem;
     top: 0;
-    margin: 0;
   }
 
   input[type="number"] {
@@ -269,37 +266,35 @@ footer p {
 
   div.aux1 {
     position: relative;
-    margin-top: 15rem;
+    top: -10rem;
   }
 
   div.aux2 {
     position: relative;
-    top: 0rem;
-    margin-top: 0;
+    top: -40rem;
   }
+
   .container {
     display: flex;
     flex-direction: column;
     width: 35rem;
     height: 55rem;
-    top: -30rem;
   }
 
   .container button {
-    margin: 0 auto 0.5rem auto;
+    margin: 0 auto;
   }
 
   .preview {
-    margin-right: 1.5rem;
-    height: 10rem;
+    margin: 0.5rem auto;
   }
 
   #btn-copy {
-    margin: 1rem 0;
+    margin: 2.5rem 0;
   }
 
   .container-checkboxes {
-    margin: 0.5rem auto;
+    margin: 1rem auto 0 auto;
   }
 
   .custom-shape-divider-bottom {

@@ -146,6 +146,8 @@ input[type="number"] {
   transition: width 0.4s ease-in-out;
   -moz-transition: width 0.4s ease-in-out;
   -webkit-transition: width 0.4s ease-in-out;
+
+  outline: none;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

@@ -302,6 +302,7 @@ footer p {
   }
 
   .custom-shape-divider-bottom {
-    position: absolute;
+    position: relative;
+    bottom: -250px;
   }
 }

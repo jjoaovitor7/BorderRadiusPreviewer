@@ -38,17 +38,16 @@ body#page-home {
 
 /* Header */
 body#page-home header {
-  background: #39cccc;
-  background-image: url("../assets/headerANDfooter.jpg");
-  width: 100%;
-  text-align: center;
-  border-bottom: 0.35rem solid #000;
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  z-index: 1;
 }
+
 body#page-home header h1 {
   font-family: "Open Sans", sans-serif;
-  margin: 1rem 0;
   color: #fff;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-shadow: 0.4rem 0.4rem 0.2rem #000;
@@ -230,8 +229,6 @@ button:active {
 
 /* Footer */
 footer {
-  background-color: #39cccc;
-  background-image: url("../assets/headerANDfooter.jpg");
   position: fixed;
   bottom: 0;
   left: 0;
@@ -250,8 +247,13 @@ footer p {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 2.8rem;
+  body#page-home header{
+    position: absolute;
+    left: 90px;
+  }
+
+  body#page-home header h1 {
+    font-size: 2rem;
   }
 
   #info {
@@ -300,6 +302,6 @@ footer p {
   }
 
   .custom-shape-divider-bottom {
-    position: relative;
+    position: absolute;
   }
 }

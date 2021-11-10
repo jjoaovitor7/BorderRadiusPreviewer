@@ -1,7 +1,7 @@
 # BorderRadiusPreviewer
 
 <p align="center">
-  <img src="./screenshots/2.png">
+  <img src="./screenshots/1.png">
 </p>
 
 <p align="center">

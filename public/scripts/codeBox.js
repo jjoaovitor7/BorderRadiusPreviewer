@@ -16,22 +16,6 @@ function codeBox(input1, input2, input3, input4) {
 
   const code = document.querySelector(".code");
 
-  if (input1 == "") {
-    input1 = 0;
-  }
-
-  if (input2 == "") {
-    input2 = 0;
-  }
-
-  if (input3 == "") {
-    input3 = 0;
-  }
-
-  if (input4 == "") {
-    input4 = 0;
-  }
-
   // se o checkbox do css3 estiver checkado
   if (CSS3Checked && !MOZChecked && !WEBKITChecked) {
     code.innerHTML = `border-radius: ${input1}px ${input2}px ${input3}px ${input4}px;`;

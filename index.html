@@ -9,7 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./public/css/style.css" />
 
-    <!-- LOBSTER FONT -->
+    <!-- LOBSTER AND OPEN SANS FONT -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
@@ -23,115 +23,106 @@
     <title>Border Radius Preview</title>
   </head>
 
-  <body id="page-home" class="d-flex-center-column">
-    <header>
-      <h1>Border Radius Previewer</h1>
-    </header>
+  <body>
+    <div id="home">
+      <header class="p-absolute" style="top: 35px; left: 20px; z-index: 1">
+        <h1 id="header__title" class="c-white uppercase">
+          Border Radius Previewer
+        </h1>
+      </header>
 
-    <div class="custom-shape-divider-top">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
+      <div class="custom-shape-divider-top w100">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+
+      <div
+        class="container d-flex flex-d-column justify-content-center-md align-items-center-md"
+        style="z-index: 999"
       >
-        <path
-          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-          class="shape-fill"
-        ></path>
-      </svg>
-    </div>
-
-    <div id="info">
-      <p>Olá! Esse é o meu Border Radius Previewer.</p>
-
-      <br />
-      <h3>Como funciona?</h3>
-      <p>
-        É simples, digitando os valores nos campos setados inicialmente em 0.
-      </p>
-
-      <br />
-      <p>
-        Obs.1: Para saber qual o canto que você quer alterar é necessário deixar
-        o campo em branco, ou seja, apagando todos os caracteres dele.
-      </p>
-    </div>
-
-    <div class="aux1">
-      <div class="container d-flex-center-default">
-        <div class="container-borders">
-          <input
-            type="number"
-            placeholder="top-left"
-            value="0"
-            id="border-top-left"
-          />
+        <div class="d-flex flex-d-column-md">
+          <input type="range" min="0" max="999" step="1" id="border-top-left" />
 
           <input
-            type="number"
-            placeholder="bottom-left"
-            value="0"
+            type="range"
+            min="0"
+            max="999"
+            step="1"
             id="border-bottom-left"
           />
 
           <input
-            type="number"
-            placeholder="top-right"
-            value="0"
+            type="range"
+            min="0"
+            max="999"
+            step="1"
             id="border-top-right"
           />
 
           <input
-            type="number"
-            placeholder="bottom-right"
-            value="0"
+            type="range"
+            min="0"
+            max="999"
+            step="1"
             id="border-bottom-right"
           />
         </div>
 
-        <button id="btn-reset">Resetar</button>
+        <button id="btn-reset" class="c-white">Resetar</button>
 
         <div class="preview"></div>
       </div>
-    </div>
 
-    <div class="aux2">
-      <div class="container d-flex-center-default">
-        <p class="code">border-radius: 0px 0px 0px 0px;</p>
-        <br />
+      <div
+        class="
+          container
+          d-flex
+          flex-d-column-md
+          justify-content-center-md
+          align-items-center-md
+        "
+        style="z-index: 999"
+      >
+        <div class="d-flex justify-content-center-md align-items-center-md" style="margin-top: 2rem;">
+          <p class="code">border-radius: 0px 0px 0px 0px;</p>
+          <br />
 
-        <button id="btn-copy">Copiar</button>
+          <button id="btn-copy" class="c-white">Copiar</button>
+        </div>
 
-        <div class="container-checkboxes">
+        <div class="d-flex justify-content-center-md align-items-center-md" style="margin-top: 2rem;">
           <input type="checkbox" name="css3" id="css3" checked />
-          <label>css3</label>
+          <label style="margin-left: 1rem; font-size: 2rem;">css3&nbsp;</label>
           <input type="checkbox" name="moz" id="moz" />
-          <label>moz</label>
+          <label style="margin-left: 1rem; font-size: 2rem;">moz&nbsp;</label>
           <input type="checkbox" name="webkit" id="webkit" />
-          <label>webkit</label>
+          <label style="margin-left: 1rem; font-size: 2rem;">webkit</label>
         </div>
       </div>
+
+      <div class="custom-shape-divider-bottom w100">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </div>
-
-    <div class="custom-shape-divider-bottom">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-          class="shape-fill"
-        ></path>
-      </svg>
-    </div>
-
-    <footer>
-      <p>jjoaovitor7</p>
-    </footer>
-
     <script type="module" src="./public/scripts/main.js"></script>
   </body>
 </html>

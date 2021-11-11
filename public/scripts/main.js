@@ -54,10 +54,10 @@ function process(e) {
 
 
 ///// inputs event /////
-inputBorder1.addEventListener("change", process);
-inputBorder2.addEventListener("change", process);
-inputBorder3.addEventListener("change", process);
-inputBorder4.addEventListener("change", process);
+inputBorder1.addEventListener("input", process);
+inputBorder2.addEventListener("input", process);
+inputBorder3.addEventListener("input", process);
+inputBorder4.addEventListener("input", process);
 ////////////////////////
 
 

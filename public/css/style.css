@@ -95,6 +95,10 @@ body {
   opacity: 0.5;
 }
 
+#border-top-left, #border-bottom-left, #border-top-right, #border-bottom-right {
+  margin: .8rem 0;
+}
+
 #btn-reset, #btn-copy {
   background-color: #008cba;
   border: none;

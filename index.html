@@ -6,120 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Pré-visualizador de border-radius." />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css" />
 
-    <!-- LOBSTER AND OPEN SANS FONT -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-    />
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" />
 
-    <!-- TITLE -->
     <title>Border Radius Preview</title>
   </head>
 
   <body>
     <div id="home">
-      <header class="p-absolute" style="top: 35px; left: 20px; z-index: 1">
+      <header id="main-header" class="p-absolute">
         <h1 id="header__title" class="c-white uppercase">
           Border Radius Previewer
         </h1>
       </header>
 
       <div class="custom-shape-divider-top w100">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"
-          ></path>
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            fill="#4a90e2" fill-opacity="0.5"></path>
         </svg>
       </div>
 
-      <div
-        class="container d-flex flex-d-column justify-content-center-md align-items-center-md"
-        style="z-index: 999"
-      >
+      <div class="container d-flex flex-d-column justify-content-center-md align-items-center-md" style="z-index: 999">
         <div class="d-flex flex-d-column-md">
-          <input type="range" min="0" max="999" step="1" id="border-top-left" />
-
-          <input
-            type="range"
-            min="0"
-            max="999"
-            step="1"
-            id="border-bottom-left"
-          />
-
-          <input
-            type="range"
-            min="0"
-            max="999"
-            step="1"
-            id="border-top-right"
-          />
-
-          <input
-            type="range"
-            min="0"
-            max="999"
-            step="1"
-            id="border-bottom-right"
-          />
+          <input id="border-top-left" type="range" min="0" max="999" step="1"/>
+          <input id="border-bottom-left" type="range" min="0" max="999" step="1"/>
+          <input id="border-top-right" type="range" min="0" max="999" step="1"/>
+          <input id="border-bottom-right" type="range" min="0" max="999" step="1"/>
         </div>
 
         <button id="btn-reset" class="c-white">Resetar</button>
-
         <div class="preview"></div>
       </div>
 
-      <div
-        class="
-          container
-          d-flex
-          flex-d-column-md
-          justify-content-center-md
-          align-items-center-md
-        "
-        style="z-index: 999"
-      >
+      <div class="container d-flex flex-d-column-md justify-content-center-md align-items-center-md" style="z-index: 999">
         <div class="d-flex justify-content-center-md align-items-center-md" style="margin-top: 2rem;">
           <p class="code">border-radius: 0px 0px 0px 0px;</p>
-          <br />
-
           <button id="btn-copy" class="c-white">Copiar</button>
         </div>
 
         <div class="d-flex justify-content-center-md align-items-center-md" style="margin-top: 2rem;">
           <input type="checkbox" name="css3" id="css3" checked />
-          <label style="margin-left: 1rem; font-size: 2rem;">css3&nbsp;</label>
+          <label class="preview-option">css3&nbsp;</label>
           <input type="checkbox" name="moz" id="moz" />
-          <label style="margin-left: 1rem; font-size: 2rem;">moz&nbsp;</label>
+          <label class="preview-option">moz&nbsp;</label>
           <input type="checkbox" name="webkit" id="webkit" />
-          <label style="margin-left: 1rem; font-size: 2rem;">webkit</label>
+          <label class="preview-option">webkit</label>
         </div>
       </div>
 
       <div class="custom-shape-divider-bottom w100">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"
-          ></path>
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          fill="#4a90e2" fill-opacity="0.5"></path>
         </svg>
       </div>
     </div>

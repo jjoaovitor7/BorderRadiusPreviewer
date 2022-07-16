@@ -23,15 +23,3 @@ Pré-visualizador de _border-radius_.
 - JavaScript
 
 ---
-
-## :computer: Como baixar o projeto
-
-```bash
-  // Clonar o repositório
-  $ git clone https://github.com/jjoaovitor7/BorderRadiusPreviewer
-
-  // Entrar no diretório
-  $ cd BorderRadiusPreviewer
-```
-
----
